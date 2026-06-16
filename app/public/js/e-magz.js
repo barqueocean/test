@@ -1,4 +1,10 @@
 $(function(){
+	var easeScrollFunc = function() {
+		if ($.fn.easeScroll) {
+			$("html").easeScroll();
+		}
+	}
+
 	var youtube_api_key = 'YOUR_API_KEY';
 
 	var loading = {
@@ -363,7 +369,7 @@ $(function(){
 					video_list.trigger('next.owl.carousel');
 				});
 			}
-		});		
+		});
 	}
 
 	function convert_time(duration) {
