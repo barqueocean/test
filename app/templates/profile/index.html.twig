@@ -1,0 +1,12 @@
+<h1>Личный кабинет</h1>
+
+<p>Email: {{ app.user.email }}</p>
+<p>Роли: {{ app.user.roles|join(', ') }}</p>
+
+{% if is_granted('ROLE_ADMIN') %}
+    <p>Тип пользователя: Администратор</p>
+{% else %}
+    <p>Тип пользователя: Пользователь</p>
+{% endif %}
+
+<a href="{{ path('app_logout') }}">Logout</a>

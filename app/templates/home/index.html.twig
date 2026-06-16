@@ -1,7 +1,15 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
+    <section class="home" style="margin-top: 180px;">
+        <div class="container">
 
+            {% for article in articles %}
+                <h2>{{ article.title }}</h2>
+            {% endfor %}
+
+        </div>
+    </section>
     <header class="primary">
         <div class="firstbar">
             <div class="container">
@@ -38,7 +46,7 @@
                     <div class="col-md-3 col-sm-12 text-right">
                         <ul class="nav-icons">
                             <li><a href="register.html"><i class="ion-person-add"></i><div>Register</div></a></li>
-                            <li><a href="login.html"><i class="ion-person"></i><div>Login</div></a></li>
+                            <li><a href="{{ path('app_login') }}">Login</a></li>
                         </ul>
                     </div>
                 </div>
@@ -169,7 +177,9 @@
                                                                 <div class="time">December 10, 2016</div>
                                                                 <div class="category"><a href="category.html">Healthy</a></div>
                                                             </div>
-                                                            <h2><a href="single.html">Duis aute irure dolor in reprehenderit in voluptate</a></h2>
+                                                            <h2><a href="single.html">
+                                                                    Duis aute irure dolor in reprehenderit in voluptate
+                                                                </a></h2>
                                                         </div>
                                                     </div>
                                                 </article>
