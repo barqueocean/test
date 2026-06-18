@@ -14,7 +14,9 @@ final class HomeController extends AbstractController
         ArticleRepository $articleRepository
     ): Response {
         return $this->render('home/index.html.twig', [
-            'articles' => $articleRepository->findLatest(4),
+            'latestArticles' => $articleRepository->findLatest(4),
+            'newsArticles' => $articleRepository->findLatest(10),
+            'hotArticles' => $articleRepository->findLatest(6),
         ]);
     }
 }

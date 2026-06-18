@@ -25,6 +25,19 @@ class ArticleRepository extends ServiceEntityRepository
             ->getResult();
     }
 
+    public function findOneBySlug(string $slug): ?Article
+    {
+        return $this->createQueryBuilder('a')
+            ->leftJoin('a.category', 'c')
+            ->addSelect('c')
+            ->leftJoin('a.author', 'u')
+            ->addSelect('u')
+            ->where('a.slug = :slug')
+            ->setParameter('slug', $slug)
+            ->getQuery()
+            ->getOneOrNullResult();
+    }
+
     //    /**
     //     * @return Article[] Returns an array of Article objects
     //     */
