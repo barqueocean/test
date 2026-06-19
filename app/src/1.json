@@ -1,0 +1,579 @@
+{
+    "id": "019d9beb-1f69-71fa-a781-b5c60d54da44",
+    "setup": {
+        "id": "00000000-0000-0000-0000-000000000000",
+        "versionId": "11777bb9-fd14-4cb8-ac21-7a897065c697"
+    },
+    "status": "Completed",
+    "values": [
+        {
+            "text": "2000-10-08",
+            "field": {
+                "path": "$.personalInformation.dateOfBirth"
+            },
+            "valueType": "Text"
+        },
+        {
+            "text": "AFG",
+            "field": {
+                "path": "$.personalInformation.citizenship[0]"
+            },
+            "valueType": "Text"
+        },
+        {
+            "text": "Test",
+            "field": {
+                "path": "$.personalInformation.personalCode"
+            },
+            "valueType": "Text"
+        },
+        {
+            "text": "Test",
+            "field": {
+                "path": "$.personalInformation.taxNumber"
+            },
+            "valueType": "Text"
+        },
+        {
+            "field": {
+                "path": "$.personalInformation.phoneNumberFirst"
+            },
+            "integer": 905338885267,
+            "valueType": "Integer"
+        },
+        {
+            "text": "cruis1230483@gmail.com",
+            "field": {
+                "path": "$.personalInformation.eMai"
+            },
+            "valueType": "Text"
+        },
+        {
+            "text": "ALB",
+            "field": {
+                "path": "$.personalInformation.residentialAddress[0].country"
+            },
+            "valueType": "Text"
+        },
+        {
+            "text": "Test",
+            "field": {
+                "path": "$.personalInformation.residentialAddress[0].city"
+            },
+            "valueType": "Text"
+        },
+        {
+            "text": "Test",
+            "field": {
+                "path": "$.personalInformation.residentialAddress[0].address"
+            },
+            "valueType": "Text"
+        },
+        {
+            "text": "Test",
+            "field": {
+                "path": "$.personalInformation.residentialAddress[0].postalCode"
+            },
+            "valueType": "Text"
+        },
+        {
+            "text": "Employed",
+            "field": {
+                "path": "$.backgroundInformation.occupation.occupationGroup[0]"
+            },
+            "valueType": "Text"
+        },
+        {
+            "text": "SelfEmployed",
+            "field": {
+                "path": "$.backgroundInformation.occupation.occupationGroup[1]"
+            },
+            "valueType": "Text"
+        },
+        {
+            "text": "Unemployed",
+            "field": {
+                "path": "$.backgroundInformation.occupation.occupationGroup[2]"
+            },
+            "valueType": "Text"
+        },
+        {
+            "text": "Retired",
+            "field": {
+                "path": "$.backgroundInformation.occupation.occupationGroup[3]"
+            },
+            "valueType": "Text"
+        },
+        {
+            "text": "Student",
+            "field": {
+                "path": "$.backgroundInformation.occupation.occupationGroup[4]"
+            },
+            "valueType": "Text"
+        },
+        {
+            "text": "OtherActivityIncludingShareholdingInCompaniesRentIncomeOtherPersonalIncomeTypes",
+            "field": {
+                "path": "$.backgroundInformation.occupation.occupationGroup[5]"
+            },
+            "valueType": "Text"
+        },
+        {
+            "text": "Test",
+            "field": {
+                "path": "$.backgroundInformation.occupation.otherActivity[0].otherSpecify[0].otherSpecify"
+            },
+            "valueType": "Text"
+        },
+        {
+            "text": "Test",
+            "field": {
+                "path": "$.backgroundInformation.occupation.selfemployedactivity"
+            },
+            "valueType": "Text"
+        },
+        {
+            "text": "EmploymentIncomeSalary",
+            "field": {
+                "path": "$.backgroundInformation.fundsandwealth.fundsandwealth[0]"
+            },
+            "valueType": "Text"
+        },
+        {
+            "text": "PersonalSavings",
+            "field": {
+                "path": "$.backgroundInformation.fundsandwealth.fundsandwealth[1]"
+            },
+            "valueType": "Text"
+        },
+        {
+            "text": "Securities",
+            "field": {
+                "path": "$.backgroundInformation.fundsandwealth.fundsandwealth[2]"
+            },
+            "valueType": "Text"
+        },
+        {
+            "text": "DividendsOtherBusinessOwnershipInterests",
+            "field": {
+                "path": "$.backgroundInformation.fundsandwealth.fundsandwealth[3]"
+            },
+            "valueType": "Text"
+        },
+        {
+            "text": "Investments",
+            "field": {
+                "path": "$.backgroundInformation.fundsandwealth.fundsandwealth[4]"
+            },
+            "valueType": "Text"
+        },
+        {
+            "text": "Pension",
+            "field": {
+                "path": "$.backgroundInformation.fundsandwealth.fundsandwealth[5]"
+            },
+            "valueType": "Text"
+        },
+        {
+            "text": "SocialBenefits",
+            "field": {
+                "path": "$.backgroundInformation.fundsandwealth.fundsandwealth[6]"
+            },
+            "valueType": "Text"
+        },
+        {
+            "text": "Inheritance",
+            "field": {
+                "path": "$.backgroundInformation.fundsandwealth.fundsandwealth[7]"
+            },
+            "valueType": "Text"
+        },
+        {
+            "text": "RealEstateOrOtherPropertySales",
+            "field": {
+                "path": "$.backgroundInformation.fundsandwealth.fundsandwealth[8]"
+            },
+            "valueType": "Text"
+        },
+        {
+            "text": "IncomeFromSelfEmployment",
+            "field": {
+                "path": "$.backgroundInformation.fundsandwealth.fundsandwealth[9]"
+            },
+            "valueType": "Text"
+        },
+        {
+            "text": "LoansBorrowedFunds",
+            "field": {
+                "path": "$.backgroundInformation.fundsandwealth.fundsandwealth[10]"
+            },
+            "valueType": "Text"
+        },
+        {
+            "text": "Scholarship",
+            "field": {
+                "path": "$.backgroundInformation.fundsandwealth.fundsandwealth[11]"
+            },
+            "valueType": "Text"
+        },
+        {
+            "text": "IncomeFromFamilyMembersCloseRelativesGifts",
+            "field": {
+                "path": "$.backgroundInformation.fundsandwealth.fundsandwealth[12]"
+            },
+            "valueType": "Text"
+        },
+        {
+            "text": "WinningsLotteriesBets",
+            "field": {
+                "path": "$.backgroundInformation.fundsandwealth.fundsandwealth[13]"
+            },
+            "valueType": "Text"
+        },
+        {
+            "text": "Other",
+            "field": {
+                "path": "$.backgroundInformation.fundsandwealth.fundsandwealth[14]"
+            },
+            "valueType": "Text"
+        },
+        {
+            "text": "Test",
+            "field": {
+                "path": "$.backgroundInformation.fundsandwealth.otherSpecify"
+            },
+            "valueType": "Text"
+        },
+        {
+            "text": "Yes",
+            "field": {
+                "path": "$.backgroundInformation.relations.relations"
+            },
+            "valueType": "Text"
+        },
+        {
+            "text": "Test",
+            "field": {
+                "path": "$.backgroundInformation.relations.otherSpecify"
+            },
+            "valueType": "Text"
+        },
+        {
+            "text": "SepaPayments",
+            "field": {
+                "path": "$.backgroundInformation.purpose[0].services[0]"
+            },
+            "valueType": "Text"
+        },
+        {
+            "text": "SwiftPayments",
+            "field": {
+                "path": "$.backgroundInformation {purpose[0].services[1]"
+                {
+                    "purpose": "vasya"
+                }
+            },
+            "valueType": "Text"
+        },
+        {
+            "text": "Salary",
+            "field": {
+                "path": "$.backgroundInformation.purpose[0].purposeFunds.purposefunds[0]"
+            },
+            "valueType": "Text"
+        },
+        {
+            "text": "IncomeFromSelfEmployment",
+            "field": {
+                "path": "$.backgroundInformation.purpose[0].purposeFunds.purposefunds[1]"
+            },
+            "valueType": "Text"
+        },
+        {
+            "text": "Pension",
+            "field": {
+                "path": "$.backgroundInformation.purpose[0].purposeFunds.purposefunds[2]"
+            },
+            "valueType": "Text"
+        },
+        {
+            "text": "Scholarship",
+            "field": {
+                "path": "$.backgroundInformation.purpose[0].purposeFunds.purposefunds[3]"
+            },
+            "valueType": "Text"
+        },
+        {
+            "text": "BenefitDividendsInterestsEtc",
+            "field": {
+                "path": "$.backgroundInformation.purpose[0].purposeFunds.purposefunds[4]"
+            },
+            "valueType": "Text"
+        },
+        {
+            "text": "Gifts",
+            "field": {
+                "path": "$.backgroundInformation.purpose[0].purposeFunds.purposefunds[5]"
+            },
+            "valueType": "Text"
+        },
+        {
+            "text": "Other",
+            "field": {
+                "path": "$.backgroundInformation.purpose[0].purposeFunds.purposefunds[6]"
+            },
+            "valueType": "Text"
+        },
+        {
+            "text": "Test",
+            "field": {
+                "path": "$.backgroundInformation.purpose[0].purposeFunds.otherSpecify"
+            },
+            "valueType": "Text"
+        },
+        {
+            "text": "HouseholdExpenses",
+            "field": {
+                "path": "$.backgroundInformation.purpose[0].purposePayments.purposepayments[0]"
+            },
+            "valueType": "Text"
+        },
+        {
+            "text": "LoanPayments",
+            "field": {
+                "path": "$.backgroundInformation.purpose[0].purposePayments.purposepayments[1]"
+            },
+            "valueType": "Text"
+        },
+        {
+            "text": "PersonalExpenses",
+            "field": {
+                "path": "$.backgroundInformation.purpose[0].purposePayments.purposepayments[2]"
+            },
+            "valueType": "Text"
+        },
+        {
+            "text": "BusinessRelatedExpenses",
+            "field": {
+                "path": "$.backgroundInformation.purpose[0].purposePayments.purposepayments[3]"
+            },
+            "valueType": "Text"
+        },
+        {
+            "text": "Taxes",
+            "field": {
+                "path": "$.backgroundInformation.purpose[0].purposePayments.purposepayments[4]"
+            },
+            "valueType": "Text"
+        },
+        {
+            "text": "ForeignTransactions",
+            "field": {
+                "path": "$.backgroundInformation.purpose[0].purposePayments.purposepayments[5]"
+            },
+            "valueType": "Text"
+        },
+        {
+            "text": "Other",
+            "field": {
+                "path": "$.backgroundInformation.purpose[0].purposePayments.purposepayments[6]"
+            },
+            "valueType": "Text"
+        },
+        {
+            "text": "Test",
+            "field": {
+                "path": "$.backgroundInformation.purpose[0].purposePayments.otherSpecify"
+            },
+            "valueType": "Text"
+        },
+        {
+            "text": "SelectFive",
+            "field": {
+                "path": "$.turnover.plannedIncome"
+            },
+            "valueType": "Text"
+        },
+        {
+            "text": "SelectFive",
+            "field": {
+                "path": "$.turnover.expectedIncomingPayments"
+            },
+            "valueType": "Text"
+        },
+        {
+            "text": "SelectFive",
+            "field": {
+                "path": "$.turnover.plannedOutgoingPayments"
+            },
+            "valueType": "Text"
+        },
+        {
+            "text": "SelectFive",
+            "field": {
+                "path": "$.turnover.expectedOutgoingPayments"
+            },
+            "valueType": "Text"
+        },
+        {
+            "text": "ALB",
+            "field": {
+                "path": "$.paymentCountries.countriesFrom[0].countriesFromInfo[0].selectCountry"
+            },
+            "valueType": "Text"
+        },
+        {
+            "text": "ALB",
+            "field": {
+                "path": "$.paymentCountries.countriesTo[0].countriesToInfo[0].selectCountry"
+            },
+            "valueType": "Text"
+        },
+        {
+            "text": "No",
+            "field": {
+                "path": "$.pep.pep.areYouPep"
+            },
+            "valueType": "Text"
+        },
+        {
+            "text": "Yes",
+            "field": {
+                "path": "$.accountOwnership.accountOwnership[0].thirdPartyTransactions"
+            },
+            "valueType": "Text"
+        },
+        {
+            "text": "No",
+            "field": {
+                "path": "$.accountOwnership.agentsRelationships[0].agentsRelationships.agentReferral"
+            },
+            "valueType": "Text"
+        },
+        {
+            "field": {
+                "path": "$.declaration.first"
+            },
+            "boolean": true,
+            "valueType": "Boolean"
+        },
+        {
+            "field": {
+                "path": "$.declaration.second"
+            },
+            "boolean": true,
+            "valueType": "Boolean"
+        },
+        {
+            "field": {
+                "path": "$.declaration.third"
+            },
+            "boolean": true,
+            "valueType": "Boolean"
+        },
+        {
+            "field": {
+                "path": "$.finalConfirmation.trueInformation"
+            },
+            "boolean": true,
+            "valueType": "Boolean"
+        },
+        {
+            "field": {
+                "path": "$.finalConfirmation.transferOfMyData"
+            },
+            "boolean": true,
+            "valueType": "Boolean"
+        },
+        {
+            "field": {
+                "path": "$.finalConfirmation.onlyLegitimatePurposes"
+            },
+            "boolean": true,
+            "valueType": "Boolean"
+        },
+        {
+            "field": {
+                "path": "$.finalConfirmation.iAmBeneficialowner"
+            },
+            "boolean": true,
+            "valueType": "Boolean"
+        },
+        {
+            "field": {
+                "path": "$.finalConfirmation.termsandconditionsconfirmation"
+            },
+            "boolean": true,
+            "valueType": "Boolean"
+        },
+        {
+            "field": {
+                "path": "$.form.completed"
+            },
+            "boolean": true,
+            "valueType": "Boolean"
+        }
+    ],
+    "createdUtc": "2026-04-17T14:49:30.7292778Z",
+    "attachments": [
+        {
+            "fileId": "forms-70639bb2f11240b4a4d0d8dfb361a7ca",
+            "fileName": "11111.pdf",
+            "fieldPath": "$.personalInformation.residentialAddress[0].proofOfAddress"
+        },
+        {
+            "fileId": "forms-f341ef181c9447acaa4d45617a77b32e",
+            "fileName": "22222.pdf",
+            "fieldPath": "$.personalInformation.residentialAddress[0].proofOfAddress"
+        }
+    ],
+    "stepProgress": [
+        {
+            "ref": "accountOwnership",
+            "order": 6,
+            "isCompleted": true
+        },
+        {
+            "ref": "personalInformation",
+            "order": 1,
+            "isCompleted": true
+        },
+        {
+            "ref": "information",
+            "order": 0,
+            "isCompleted": true
+        },
+        {
+            "ref": "finalConfirmation",
+            "order": 8,
+            "isCompleted": true
+        },
+        {
+            "ref": "paymentCountries",
+            "order": 4,
+            "isCompleted": true
+        },
+        {
+            "ref": "backgroundInformation",
+            "order": 2,
+            "isCompleted": true
+        },
+        {
+            "ref": "declaration",
+            "order": 7,
+            "isCompleted": true
+        },
+        {
+            "ref": "turnover",
+            "order": 3,
+            "isCompleted": true
+        },
+        {
+            "ref": "pep",
+            "order": 5,
+            "isCompleted": true
+        }
+    ],
+    "applicationId": "eedc297b-8ba2-4730-91fa-8a98d8230b43",
+    "identityVerificationId": "019d9bea-cdc6-7c1c-95bb-e00f7ac5297b"
+}

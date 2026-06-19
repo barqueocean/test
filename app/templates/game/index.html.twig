@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Street Survival</title>
+
+    <style>
+        body {
+            background: #181818;
+            color: white;
+            font-family: Arial;
+            margin: 0;
+            padding: 0;
+        }
+
+        .layout {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        .left, .center, .right {
+            padding: 20px;
+        }
+
+        .left {
+            width: 25%;
+            background: #202020;
+        }
+
+        .center {
+            width: 50%;
+            background: #252525;
+        }
+
+        .right {
+            width: 25%;
+            background: #202020;
+        }
+
+        .action {
+            margin: 10px 0;
+            padding: 12px;
+            background: #333;
+            border-radius: 8px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 15px;
+            background: #555;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+        }
+
+        .slot {
+            border: 1px solid #555;
+            padding: 10px;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="layout">
+
+    <div class="left">
+        <h2>Статы</h2>
+
+        <p>День: {{ character.day }}</p>
+        <p>Голод: {{ character.stats.hunger }}</p>
+        <p>Энергия: {{ character.stats.energy }}</p>
+        <p>Здоровье: {{ character.stats.health }}</p>
+        <p>Гигиена: {{ character.stats.hygiene }}</p>
+        <p>Навык: {{ character.stats.skill }}</p>
+        <p>Деньги: {{ character.stats.money }}</p>
+
+        <br>
+
+        <a class="button" href="{{ path('game_next_day', {id: character.id}) }}">
+            Следующий день
+        </a>
+    </div>
+
+    <div class="center">
+        <h1>{{ character.name }}</h1>
+
+        <h2>Локация</h2>
+
+        {% if character.currentLocation %}
+            <p>{{ character.currentLocation.name }}</p>
+            <p>{{ character.currentLocation.description }}</p>
+        {% else %}
+            <p>Вы проснулись в помойке.</p>
+        {% endif %}
+
+        <h2>Доступные действия</h2>
+
+        {% for action in actions %}
+            <div class="action">
+                <strong>{{ action.name }}</strong>
+                <p>{{ action.description }}</p>
+            </div>
+        {% else %}
+            <p>Пока действий нет.</p>
+        {% endfor %}
+    </div>
+
+    <div class="right">
+        <h2>Экипировка</h2>
+
+        <div class="slot">Head</div>
+        <div class="slot">Body</div>
+        <div class="slot">Legs</div>
+        <div class="slot">Feet</div>
+        <div class="slot">Hands</div>
+
+        <h2>Инвентарь</h2>
+
+        {% for item in character.characterItems %}
+            <div class="slot">
+                {{ item.item.name }}
+                x{{ item.quantity }}
+            </div>
+        {% else %}
+            <p>Пусто</p>
+        {% endfor %}
+    </div>
+
+</div>
+
+</body>
+</html>
