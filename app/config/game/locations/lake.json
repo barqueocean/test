@@ -1,0 +1,48 @@
+{
+    "code": "lake",
+    "name": "Озеро",
+    "objects": [
+        {
+            "id": "water",
+            "name": "Вода",
+            "actions": [
+                {
+                    "id": "drink",
+                    "title": "Попить воды",
+                    "effects": [
+                        {
+                            "type": "thirst",
+                            "value": -35
+                        }
+                    ]
+                },
+                {
+                    "id": "wash",
+                    "title": "Умыться",
+                    "effects": [
+                        {
+                            "type": "hygiene",
+                            "value": 20
+                        }
+                    ]
+                },
+                {
+                    "id": "laundry",
+                    "title": "Постирать одежду",
+                    "requirements": [
+                        {
+                            "type": "item",
+                            "code": "soap"
+                        }
+                    ],
+                    "effects": [
+                        {
+                            "type": "hygiene",
+                            "value": 40
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

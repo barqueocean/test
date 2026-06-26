@@ -4,6 +4,8 @@ namespace App\Controller\Game;
 
 use App\Entity\Character;
 use App\Entity\CharacterStats;
+use App\Entity\City;
+use App\Entity\User;
 use App\Repository\ActionRepository;
 use App\Service\Game\GameEngineService;
 use Doctrine\ORM\EntityManagerInterface;
@@ -17,11 +19,34 @@ class GameController extends AbstractController
     public function start(
         EntityManagerInterface $entityManager
     ): Response {
+        $city = $entityManager
+            ->getRepository(City::class)
+            ->findOneBy([]);
+
+        if (!$city) {
+            return $this->json([
+                'error' => 'No city found'
+            ], 400);
+        }
+
+        $user = $entityManager
+            ->getRepository(User::class)
+            ->find(3);
+
+        if (!$user) {
+            return $this->json([
+                'error' => 'User not found'
+            ], 400);
+        }
+
         $character = new Character();
         $character->setName('Бомж');
-        $character->setOrigin('homeless');
-        $character->setStatus('active');
+        $character->setOrigin('street');
+        $character->setProfession(null);
         $character->setDay(1);
+        $character->setStatus('active');
+        $character->setCurrentCity($city);
+        $character->setUser($user);
 
         $stats = new CharacterStats();
         $stats->setCharacter($character);
@@ -46,7 +71,7 @@ class GameController extends AbstractController
 
         if ($character->getCurrentLocation()) {
             $actions = $actionRepository->findBy([
-                'location' => $character->getCurrentLocation()
+                'locationRelation' => $character->getCurrentLocation()
             ]);
         }
 

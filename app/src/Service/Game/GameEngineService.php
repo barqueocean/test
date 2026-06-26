@@ -2,75 +2,58 @@
 
 namespace App\Service\Game;
 
-use App\Entity\Action;
 use App\Entity\Character;
 use Doctrine\ORM\EntityManagerInterface;
 
 class GameEngineService
 {
     public function __construct(
-        private readonly EntityManagerInterface $entityManager
+        private EntityManagerInterface $entityManager
     ) {}
 
-    public function nextDay(Character $character): void
+    public function tick(Character $character): void
     {
-        $character->setDay($character->getDay() + 1);
-
         $stats = $character->getStats();
 
-        $stats->setHunger($stats->getHunger() - 10);
-        $stats->setEnergy($stats->getEnergy() - 15);
-        $stats->setHygiene($stats->getHygiene() - 5);
-        $stats->setMotivation($stats->getMotivation() - 3);
+        // голод растёт
+        $stats->setHunger(
+            min(100, $stats->getHunger() + 1)
+        );
 
-        if ($stats->getHunger() <= 0) {
-            $stats->setHealth($stats->getHealth() - 20);
+        // жажда растёт быстрее
+        $stats->setThirst(
+            min(100, $stats->getThirst() + 2)
+        );
+
+        // энергия падает
+        $stats->setEnergy(
+            max(0, $stats->getEnergy() - 1)
+        );
+
+        // гигиена падает
+        $stats->setHygiene(
+            max(0, $stats->getHygiene() - 1)
+        );
+
+        // если критический голод
+        if ($stats->getHunger() >= 90) {
+            $stats->setHealth(
+                max(0, $stats->getHealth() - 2)
+            );
         }
 
+        // если критическая жажда
+        if ($stats->getThirst() >= 90) {
+            $stats->setHealth(
+                max(0, $stats->getHealth() - 3)
+            );
+        }
+
+        // смерть
         if ($stats->getHealth() <= 0) {
             $character->setStatus('dead');
         }
 
         $this->entityManager->flush();
-    }
-
-    public function performAction(Character $character, Action $action): void
-    {
-        $stats = $character->getStats();
-
-        $stats->setEnergy(
-            $stats->getEnergy() - $action->getEnergyCost()
-        );
-
-        if ($action->getHungerEffect()) {
-            $stats->setHunger(
-                $stats->getHunger() + $action->getHungerEffect()
-            );
-        }
-
-        if ($action->getHealthEffect()) {
-            $stats->setHealth(
-                $stats->getHealth() + $action->getHealthEffect()
-            );
-        }
-
-        if ($action->getMoneyEffect()) {
-            $stats->setMoney(
-                bcadd($stats->getMoney(), $action->getMoneyEffect(), 2)
-            );
-        }
-
-        $this->entityManager->flush();
-    }
-
-    public function canDoAction(Character $character, Action $action): bool
-    {
-        $stats = $character->getStats();
-
-        if ($action->getSkillRequired() !== null) {
-            return $stats->getSkill() >= $action->getSkillRequired();
-        }
-
-        return true;
     }
 }

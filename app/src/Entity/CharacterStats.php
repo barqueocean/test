@@ -14,6 +14,9 @@ class CharacterStats
     private ?int $id = null;
 
     #[ORM\Column]
+    private ?int $thirst = 50;
+
+    #[ORM\Column]
     private ?int $hunger = 50;
 
     #[ORM\Column]
@@ -87,6 +90,17 @@ class CharacterStats
     public function setCharacter(Character $character): static
     {
         $this->character = $character;
+        return $this;
+    }
+
+    public function getThirst(): ?int
+    {
+        return $this->thirst;
+    }
+
+    public function setThirst(int $thirst): static
+    {
+        $this->thirst = $thirst;
         return $this;
     }
 }

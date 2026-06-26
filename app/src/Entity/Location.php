@@ -16,6 +16,9 @@ class Location
     #[ORM\Column]
     private ?int $id = null;
 
+    #[ORM\Column(length: 50, unique: true)]
+    private string $code;
+
     #[ORM\Column(length: 100)]
     private ?string $name = null;
 
@@ -31,12 +34,6 @@ class Location
     #[ORM\ManyToOne]
     #[ORM\JoinColumn(nullable: false)]
     private ?City $city = null;
-
-    /**
-     * @var Collection<int, Action>
-     */
-    #[ORM\OneToMany(targetEntity: Action::class, mappedBy: 'location')]
-    private Collection $actions;
 
     public function __construct()
     {
@@ -103,32 +100,14 @@ class Location
         return $this;
     }
 
-    /**
-     * @return Collection<int, Action>
-     */
-    public function getActions(): Collection
+    public function getCode(): ?string
     {
-        return $this->actions;
+        return $this->code;
     }
 
-    public function addAction(Action $action): static
+    public function setCode(string $code): static
     {
-        if (!$this->actions->contains($action)) {
-            $this->actions->add($action);
-            $action->setLocationRelation($this);
-        }
-
-        return $this;
-    }
-
-    public function removeAction(Action $action): static
-    {
-        if ($this->actions->removeElement($action)) {
-            // set the owning side to null (unless already changed)
-            if ($action->getLocationRelation() === $this) {
-                $action->setLocationRelation(null);
-            }
-        }
+        $this->code = $code;
 
         return $this;
     }
